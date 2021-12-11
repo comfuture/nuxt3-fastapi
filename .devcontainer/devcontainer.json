@@ -18,7 +18,11 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint",
+		"bungcip.better-toml",
+		"ms-python.vscode-pylance",
+		"ms-python.python",
+		"johnsoncodehk.volar"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
