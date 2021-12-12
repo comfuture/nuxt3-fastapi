@@ -74,7 +74,6 @@ const APIProxyModule = defineNuxtModule<APIProxyModuleOptions>({
     let backend
 
     nuxt.hook('modules:done', (moduleContainer) => {
-      console.info('hook modules:done')
       backend = spawn('uvicorn', ['--port', '' + backendPort, 'server:app'], {
         env: process.env,
         detached: true,
