@@ -1,10 +1,23 @@
 import { defineNuxtModule, addServerMiddleware, addPluginTemplate } from '@nuxt/kit'
+import { AsyncData } from '#app/composables/asyncData'
 import type { IncomingMessage } from 'http'
 
 import { resolve } from 'pathe'
 import { spawn } from 'child_process'
 import { createProxyMiddleware } from 'http-proxy-middleware'
 import accepts from 'accepts'
+
+declare module '#app' {
+  interface NuxtApp {
+    $api (url: string, options?: any): AsyncData<Pick<unknown, never>>
+  }
+}
+
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    $api (url: string, options?: any): AsyncData<Pick<unknown, never>>
+  }
+}
 
 interface ProxyRule {
   (pathname: string, req: IncomingMessage): boolean;
