@@ -1,7 +1,7 @@
 <template>
-  <div>{{ data.message }}</div>
+  <div>{{ data?.message }}</div>
 </template>
 <script setup lang="ts">
 const { $api } = useNuxtApp()
-const { data } = $api('/')
+const { data } = await $api('/')
 </script>
