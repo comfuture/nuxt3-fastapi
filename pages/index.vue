@@ -9,6 +9,7 @@
 </template>
 <script setup lang="ts">
 const { $api } = useNuxtApp()
-const { data } = await $api('/')
+const { fullPath } = useRoute()
+const { data } = await $api(fullPath)
 const runMode = process.server ? 'server' : 'browser'
 </script>
