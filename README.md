@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# Nuxt3 with fastapi backend
 
 We recommend to look at the [documentation](https://v3.nuxtjs.org).
 
@@ -7,7 +7,9 @@ We recommend to look at the [documentation](https://v3.nuxtjs.org).
 Make sure to install the dependencies
 
 ```bash
-yarn install
+npm install
+pip install flit
+flit install
 ```
 
 ## Development
@@ -15,7 +17,7 @@ yarn install
 Start the development server on http://localhost:3000
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 ## Production
@@ -23,7 +25,8 @@ yarn dev
 Build the application for production:
 
 ```bash
-yarn build
+npm run build
+python -m build
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
