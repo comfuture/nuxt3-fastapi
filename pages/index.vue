@@ -8,6 +8,8 @@
   </div>
 </template>
 <script setup lang="ts">
+
+
 const { $api } = useNuxtApp()
 const { fullPath } = useRoute()
 const { data } = await $api(fullPath)
